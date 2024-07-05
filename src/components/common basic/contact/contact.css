@@ -1,0 +1,15 @@
+.main-poster{
+    font-weight: 400;
+    padding: 2% 0%;
+}
+.bgimage{
+    background-image: url(./Screenshot\ 2024-05-30\ 124630.jpg);
+    background-repeat:no-repeat;
+    background-size: 400px;
+    background-position: center center;
+    
+}
+.bold{
+    font-weight: 600;
+    font-size: 20px;
+}

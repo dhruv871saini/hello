@@ -1,0 +1,37 @@
+.bg-purples{
+    width:  5%;
+    background-color: rgb(116, 34, 209);
+    color: white;
+}.text-1{
+    color: rgb(32, 32, 58);
+   
+}.nextlink ul li{
+    list-style: none;
+    font-size: 18px;
+    color: tomato;
+    display:flex ;
+    flex-direction: row;
+    margin: 0 ;
+
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    
+}.nextlink ul li{
+    
+    border: 1px solid black;
+}.selected {
+    background-color: orange;
+  }
+  /* Navbar.css */
+.nav-link.active-link {
+    background-color: #007bff; /* Change this to your desired color */
+    color: white !important;
+  }/* section2.css */
+.nav-link.active {
+    background-color: orange;
+  }
+  .nextlink ul {
+    
+    border: 1px solid black;
+   
+}

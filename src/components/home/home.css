@@ -1,0 +1,44 @@
+.skew{
+    transform: skew(315deg);
+}.skew-0{
+    
+    /* width: 20vw;
+    height: 15vh; */
+    
+}.text-1{
+    color: rgb(32, 32, 58);
+    
+    font-weight: 900;
+    /* float: left; */
+    justify-content: center;    
+}.textbox1{
+    padding-top: 10%;
+    /* float: left; */
+    /* margin-left: 2%; */
+}.bg-purple{
+    /* float: left; */
+    width: 75%;
+    background-color: rgb(116, 34, 209);
+    color: white;
+}.mainimg1{
+    width: 90%;
+    border-radius: 5%;
+}.bgs-purples{
+    background-color: rgb(116, 34, 209);
+    color: white;
+    width: 25%;
+    font-size: 18px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    float: left;
+    margin-right: 12%;
+    
+}.svg{
+    font-size: 18px;
+    padding: 1%;
+}.lorem{
+    padding: 2% 0;
+}
