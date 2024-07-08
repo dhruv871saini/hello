@@ -49,18 +49,18 @@ export default class Sign extends Component {
                   <input className="check" type="checkbox" />{" "}
                   <span className="mx-auto">
                     I accept all terms & conditons
-                  </span>
-                  <div className="btn btn-primary ml-3">register now</div>
+                  </span>&nbsp;&nbsp;&nbsp;
+                  <div className="btn btn-primary ml-3 ">register now</div>
                   <div className="lasst">
-                    Already have a account{" "}
+                    Already have a account{" "}&nbsp;
                     <Link className="text-decoration-none" to="/login">
                       login Now
                     </Link>
                   </div>
                 </div>
-                <div class="container pl-4 pr-4 text-center mt-3 mb-2">
+                {/* <div class="container pl-4 pr-4 text-center mt-3 mb-2">
                   <div class="btn btn-primary text-center">DONE</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

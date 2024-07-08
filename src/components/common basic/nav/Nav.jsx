@@ -55,6 +55,11 @@ export default class Nav extends Component {
                         Database 
                       </Link>
                     </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/cart">
+                        cart 
+                      </Link>
+                    </li>
                   </ul>
                   
                   <div className="navbar-nav ml-2">
