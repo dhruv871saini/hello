@@ -35,3 +35,26 @@
     border: 1px solid black;
    
 }
+/* section2.css */
+
+.light-theme {
+  background-color: #fff; /* Light theme background color */
+  color: #333; /* Light theme text color */
+}
+
+.dark-theme  {
+  background-color: #333; /* Dark theme background color */
+  color: #fff; /* Dark theme text color */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  /* color: #333; Light theme link color */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* Dark theme link color */
+}
+.dark-theme  a{
+  background-color: #333; /* Dark theme background color */
+  color: #fff; /* Dark theme text color */
+}

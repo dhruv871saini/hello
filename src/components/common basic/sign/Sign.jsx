@@ -1,11 +1,12 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class Sign extends Component {
-  render() {
-    return (
-      <>
-        <div className="container-fluid">
+
+const Sign = () => {
+  return (
+    <div>
+    <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 ">
               <div className="container-fluid cont_main">
@@ -65,7 +66,10 @@ export default class Sign extends Component {
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+      
+    </div>
+  )
 }
+
+export default Sign
+

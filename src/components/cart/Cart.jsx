@@ -1,14 +1,24 @@
 
 import React, { useContext } from "react";
-import Cartcontainer from "./Cartcontainer";
+import { useCart } from "./Cartcontainer";
+import { useTheme } from "../theme/Themes";
+import "./cart.css"
+// import Cartcontainer from "./Cartcontainer";
 
 const Cart = () => {
-  const { cart, deleteCart, decrease, increase, total } = useContext(Cartcontainer);
+  const { cart, deleteCart, decrease, increase } = useCart();
+
+  const total = () => {
+    return cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+  };
+  // chat gpt 
+  const{darkMode}=useTheme();
 
   return (
-    <div>
+    <div className={darkMode? `dark-theme`:`light-theme`}>
       <h2>Cart</h2>
-      <table className="table table-striped ">
+      <div className={darkMode?`dark-theme`:`light-theme`}>
+      <table  className="table table-striped ">
         <thead>
           <tr>
             <th>Product</th>
@@ -19,7 +29,7 @@ const Cart = () => {
             <th>Remove</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {cart.map((item, index) => (
             <tr key={index}>
               <td>{item.name}</td>
@@ -29,9 +39,11 @@ const Cart = () => {
                 <button onClick={() => increase(index)}>+</button>{" "}
                 <button onClick={() => decrease(index)}>-</button>
               </td>
+
               <td>${(item.price * item.quantity)}</td>
               <td>
                 <button onClick={() => deleteCart(index)}>Delete</button>
+              {console.log(item.price, item.quantity)} 
               </td>
             </tr>
           ))}
@@ -42,6 +54,7 @@ const Cart = () => {
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

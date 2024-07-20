@@ -1,12 +1,12 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const Cartcontainer = createContext();
+const CartContainer = createContext();
 
-export const Cartpro = ({ children }) => {
+export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addCart = (item) => {
-    setCart([...cart, {...item,quantity:1}]);
+    setCart([...cart, { ...item, quantity: 1 }]);
   };
 
   const deleteCart = (index) => {
@@ -15,32 +15,33 @@ export const Cartpro = ({ children }) => {
     setCart(newCart);
   };
 
-  const increase =(index)=>{
-    const newCart = [...cart]
-    newCart[index].quantity++
-    setCart(newCart)
-  }
+  const increase = (index) => {
+    const newCart = [...cart];
+    newCart[index].quantity++;
+    setCart(newCart);
+  };
 
-  const decrease =(index)=>{
-  const newCart =[...cart]
-  if(newCart[index].quantity>1){
-    newCart[index].quantity--
-    setCart (newCart)
-  }
-  }
-
-    const total =()=>{
-      let total = 0
-      cart.forEach((item)=>{
-        return  total += item.price * item.quantity
-        })
+  const decrease = (index) => {
+    const newCart = [...cart];
+    if (newCart[index].quantity > 1) {
+      newCart[index].quantity--;
+      setCart(newCart);
     }
+  };
+
   return (
-    <Cartcontainer.Provider value={{ cart, addCart, deleteCart ,decrease,increase,total }}>
+    <CartContainer.Provider value={{ cart, addCart, deleteCart, decrease, increase }}>
       {children}
-    </Cartcontainer.Provider>
+    </CartContainer.Provider>
   );
 };
 
-// export  { Cartpro };
-export default Cartcontainer;
+export const useCart = () => {
+  const context = useContext(CartContainer);
+  if (!context) {
+    throw new Error(`useCart must be used within a CartProvider`);
+  }
+  return context;
+};
+// Correct export in Cartcontainer.js
+// export { CartProvider as Cartpro };

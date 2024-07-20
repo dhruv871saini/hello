@@ -3,12 +3,15 @@ import React, { Component } from "react";
 import "./home.css";
 import PlayCircle02Icon from "./PlayCircle02Icon ";
 import Section2 from "../section2/section2 navbar/Section2";
+import { useTheme } from "../theme/Themes";
 
 const Home = () => {
+  const {darkMode}=useTheme()
   return (
-    <div>
+    <div className={darkMode ? 'dark-theme' : 'light-theme'}>
         
-<div className="container-fluid">
+<div className="container-fluid ">
+
 <div className="row">
   <div className="col-md-6 textbox1">
     <div className="display-5 fw-bolder text-capitalize text-1 bg-white">

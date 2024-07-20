@@ -1,11 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./section2.css";
+import { useTheme } from "../../theme/Themes";
 // import Starter from "../starter/Starter";
 
 const Section2 = () => {
+  const {darkMode}=useTheme()
   return (
-    <div>
+    <div className={darkMode? " dark-theme":"light-theme"}>
+
       <div className="container-fluid mb-5 mt-5">
         <div className="row">
           <div className="col-md-6">
@@ -18,7 +21,7 @@ const Section2 = () => {
           </div>
           <div className="col-md-6">
             <div className="nextlink">
-              <nav className="navbar navbar-expand-lg navbar-light bg-light">
+              <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">

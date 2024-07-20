@@ -1,0 +1,26 @@
+/* section2.css */
+
+.light-theme {
+    background-color: #fff; /* Light theme background color */
+    color: #333; /* Light theme text color */
+  }
+  
+  .dark-theme {
+    background-color: #333; /* Dark theme background color */
+    color: #fff; /* Dark theme text color */
+  }
+  
+  .light-theme table,
+  .light-theme th,
+  .light-theme td {
+    background-color: #fff; /* Light theme table background color */
+    color: #333; /* Light theme table text color */
+  }
+  
+  .dark-theme table,
+  .dark-theme th,
+  .dark-theme td {
+    background-color: #333; /* Dark theme table background color */
+    color: #fff; /* Dark theme table text color */
+  }
+  

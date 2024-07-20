@@ -6,13 +6,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 const Edit = () => {
     const params=useParams()
     const navigate=useNavigate()
-
     const [data, setdata] = useState([])
-
     useEffect(() => {
       axios.get("http://localhost:3004/contact/"+params.id)
-      .then((res) => setdata(res.data))
-      
+      .then((res) => setdata(res.data))      
     }, [])
     
     const handleSubmit=(e)=>{

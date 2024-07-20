@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 // import { Cartcontainer } from "../section2/Cartcontainer";
 import Home from "../../home/Home";
-import Cartcontainer, { Cartpro } from "../../cart/Cartcontainer";
+import Cartcontainer, { Cartpro, useCart } from "../../cart/Cartcontainer";
 
-// import Cartcontainer, { Cartpro } from "../section2/Cartcontainer";
 
 
 const Starter = () => {
-  const { addCart } = useContext(Cartcontainer);
+  const { addCart } = useCart()
   const [starters, setStarters] = useState([]);
 
   useEffect(() => {
@@ -18,28 +17,28 @@ const Starter = () => {
     const mockStarters = [
       {
         name: "Tamato Salad & Carrot",
-        price: "250 Rupees",
+        price: "250 ",
         image:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         description: "Veg Mixer",
       },
       {
         name: " Cheese Pizza",
-        price: "200 Rupees",
+        price: "200 ",
         image:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         description: "Macaroni",
       },
       {
         name: " Hamsburger & fries",
-        price: "280 Rupees",
+        price: "280 ",
         image:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         description: "Neili",
       },
       {
         name: "Jalapeno poppers ",
-        price: "320 Rupees",
+        price: "320 ",
         image:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         description: "Cripsy soyabeans",

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 
 const Database1 = () => {
-
     const [data, setData] = useState([]);
     const [store, setstore] = useState([])
     const [page, setpage] = useState(0)

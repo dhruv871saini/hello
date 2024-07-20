@@ -55,14 +55,14 @@ const Logic = () => {
             </div>
             <div class="text-center mb-5">
               <div class="btn btn-primary">
-                <Link to="/login" className="text-dark fw-bold">
-                  Login
+                <Link to="/login" className="btnc text-dark fw-bold">
+                  <div class="">Login</div>
                 </Link>
               </div>{" "}
               &nbsp;&nbsp;&nbsp;
               <span class="btn btn-primary ">
-                <Link to="/sign" className="text-dark fw-bold">
-                  Signup
+                <Link to="/sign" className=" btnc text-dark fw-bold">
+                  <div>Sign up</div>
                 </Link>
               </span>
             </div>

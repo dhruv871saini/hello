@@ -13,42 +13,50 @@ import Starter from './components/section2/starter/Starter';
 import Soup from './components/section2/soup/Soup';
 import Edit from './components/Edit.jsx/Edit';
 import Database1 from './components/database/Database1';
-import { Cartpro } from './components/cart/Cartcontainer';
+import {  CartProvider } from './components/cart/Cartcontainer';
 import Cart from './components/cart/Cart';
+import { useTheme } from './components/theme/Themes';
+// import { useTheme } from './components/theme/Themes';
+// import { Themes, Themesprovider } from './components/theme/Themes';
 
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about-us' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/sign' element={<Sign />} />
-          <Route path='/login' element={<Logic />} />
-          <Route path='password' element={<Password />} />
-          <Route path='/database' element={<Database1 />} />
-          <Route path='/edit/:id' element={<Edit />} />
-          <Route path='/cart' element={<Cart />} />
-        </Routes>
-        <Routes>
-          <Route path='/' element={<Starter />} />
-          <Route path='/main' element={<Main />} />
-          <Route path='/desert' element={<Desert />} />
-          <Route path='/soup' element={<Soup />} />
-        </Routes>
+  const {darkMode}=useTheme()
 
-        <Cartpro>
-         <Routes>
-         <Route path='/' element={<Starter />} />
-         <Route path='/cart' element={<Cart />} />
-         </Routes>
-        </Cartpro>
-      </BrowserRouter>
-   
-    </>
+  return (
+    <><div  className={darkMode ? 'dark-theme' : 'light-theme'} >
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/sign' element={<Sign />} />
+        <Route path='/login' element={<Logic />} />
+        <Route path='password' element={<Password />} />
+        <Route path='/database' element={<Database1 />} />
+        <Route path='/edit/:id' element={<Edit />} />
+        <Route path='/cart' element={<Cart />} />
+      </Routes>
+      <Routes>
+        <Route path='/' element={<Starter />} />
+        <Route path='/main' element={<Main />} />
+        <Route path='/desert' element={<Desert />} />
+        <Route path='/soup' element={<Soup />} />
+      </Routes>
+      {console.log("hello")}
+{/* 
+      <CartProvider>
+       <Routes>
+       <Route path='/' element={<Starter />} />
+       <Route path='/cart' element={<Cart />} />
+       </Routes>
+      </CartProvider>
+      ya to yaha bta do ya pure app pr laga doo pure app par 
+       */}
+    </BrowserRouter>
+    </div>
+     </>
   );
 }
 
